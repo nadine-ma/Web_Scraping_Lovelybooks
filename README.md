@@ -1,6 +1,6 @@
 ## Web Scraping lovelybooks.de
 
-The code in this repository provides the functionality to scrape genre-based book lists from the book-rating website lovelybooks.de.
+The code in this repository provides the functionality to scrape genre-based book lists from the book-rating website [lovelybooks.de.](https://www.lovelybooks.de/)
 
 Currently the code extracts the following book information for books listed in genre-specific book lists:
 - `title`: Book title

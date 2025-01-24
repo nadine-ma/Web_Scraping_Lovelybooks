@@ -1,4 +1,6 @@
 import json
+import os
+
 from tqdm import tqdm
 
 import variables
@@ -46,7 +48,8 @@ def write_book_infos_to_json(book: Book, is_first: bool = False, is_last: bool =
     :param is_first: bool, whether the Book object is the first to be written to file
     :param is_last: bool, whether the Book object is the last to be written to file
     """
-    with open(variables.FILENAME_JSON + '_' + variables.TIMESTAMP + '.json', 'a', encoding='utf-8') as jsonfile:
+    with open(os.path.join("output", variables.FILENAME_JSON + '_' + variables.TIMESTAMP + '.json'), 'a',
+              encoding='utf-8') as jsonfile:
         if is_first:
             jsonfile.write('{"books": [')
         jsonfile.write(book.to_json())

@@ -58,13 +58,13 @@ def get_book_data(json_book: dict):
 
         # Apply markup cleanup on selected textual attribute values using BeautifulSoup
         if title is not None:
-            title = BeautifulSoup(title, "lxml").text
+            title = BeautifulSoup(title, "html.parser").text
         subtitle = book['subtitle']
         if subtitle is not None:
-            subtitle = BeautifulSoup(subtitle, "lxml").text
+            subtitle = BeautifulSoup(subtitle, "html.parser").text
         summary = book['summary']
         if summary is not None:
-            summary = BeautifulSoup(summary, "lxml").text
+            summary = BeautifulSoup(summary, "html.parser").text
 
         book_type = book['bookTypeDescription']
         pages = book['numberOfPages']

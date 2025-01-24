@@ -56,7 +56,7 @@ def run_scraping(genres: list[str], batch_size: Optional[int] = 60, max_pages: O
 
         time.sleep(1)
         books = list(books.values())
-        print(f"\nFinished getting basic book data {len(books)}")
+        print(f"\nFinished getting basic book data for {len(books)} books")
 
         books = list(tqdm(pool.imap(add_tags_to_book, books), total=len(books),
                           desc="Getting book tags"))
